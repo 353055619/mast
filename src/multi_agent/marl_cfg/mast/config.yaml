@@ -1,0 +1,62 @@
+# 基本参数
+env_name: mast
+algorithm_name: mast
+run_dir: ./runs/
+
+recurrent_N: 1
+
+# 训练和评估设置
+save_interval: 1 # 模型保存的间隔
+eval_interval: 25 # 评估的间隔
+log_interval: 25 # 日志记录的间隔
+# 安全设置
+safety_bound: 25 # 安全约束的边界值
+lagrangian_coef_rate: 1.e-5 # 拉格朗日乘子的更新率
+lamda_lagr: 13.78 # 拉格朗日乘子的初始值
+# 其他强化学习设置
+gae_lambda: 0.95 # GAE（广义优势估计）的lambda值
+use_gae: True # 是否使用GAE
+use_popart: False # 是否使用popart标注化
+use_valuenorm: True # 是否使用价值归一化
+use_proper_time_limits: False # 是否使用适当的时间限制
+use_share_obs: true # 是否共享观测值
+# PPO超参数设置
+kl_threshold: 0.016 # KL散度的阈值
+ls_step: 10 # 学习步骤
+accept_ratio: 0.5 # 接受比率
+clip_param: 0.2 # PPO裁剪参数
+ppo_epoch: 5 # PPO更新的epoch数量
+num_mini_batch: 1 # mini batch的数量
+value_loss_coef: 1
+huber_delta: 10.0
+use_recurrent_policy: False
+use_naive_recurrent_policy: False
+use_naive_recurrent: False
+use_max_grad_norm: True
+use_clipped_value_loss: True
+use_huber_loss: True
+
+# 学习率设置
+lr: 1.5e-3
+opti_eps: 1.e-5 # 优化器的epsilon值
+weight_decay: 0
+
+gain: 0.01
+actor_gain: 0.01
+
+std_x_coef: 1
+std_y_coef: 0.5
+n_block: 1
+embed_dim: 64
+n_head: 1
+
+episode_length: 1000
+hidden_size: 128 # RNN用不到
+gamma: 0.99
+entropy_coef: 0.01
+actor_lr: 5.e-4
+critic_lr: 5.e-4
+max_grad_norm: 10.0
+use_value_active_masks: True
+use_policy_active_masks: True
+data_chunk_length: 10
