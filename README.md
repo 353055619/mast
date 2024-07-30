@@ -4,7 +4,9 @@ This is an official implementation of "**MAST: Multi-Agent Safe Transformer for*
 
 **Reinforcement Learning**" paper.
 
-![MAST Framework](./assets/MAST Framework.png)
+<div align="center">
+  <img src="assets/MAST Framework.png" width="80%"/>
+</div>
 
 **Installation**
 
